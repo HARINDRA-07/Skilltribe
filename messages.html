@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - SkillTribe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="messages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">SkillTribe</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="collaborate.html">Collaborate</a></li>
+                <li><a href="messages.html" class="active">Messages</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="user-actions">
+                <div class="chat-icon" id="chatIcon">
+                    <span class="notification-dot" id="notificationDot"></span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="profile-photo" id="profilePhoto">
+                    <img src="https://ui-avatars.com/api/?name=User&background=random" alt="Profile">
+                    <div class="profile-notification-popup" id="profileNotification">
+                        <div class="notification-content">
+                            <span class="notification-message"></span>
+                            <button class="notification-close" aria-label="Close notification">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="messages-container">
+        <div class="contacts-sidebar">
+            <div class="contacts-header">
+                <h2>Contacts</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Search contacts...">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="contacts-list" id="contactsList">
+                <!-- Contacts will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="chat-contact-info">
+                    <div class="chat-contact-avatar">
+                        <img src="https://ui-avatars.com/api/?name=SherpAI&background=4a6cf7&color=fff" alt="SherpAI">
+                    </div>
+                    <div class="chat-contact-details">
+                        <h3 id="currentChatName">SherpAI</h3>
+                        <span class="chat-contact-status online" id="currentChatStatus">Online</span>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="chat-action-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be populated by JavaScript -->
+            </div>
+
+            <div class="chat-input">
+                <div class="input-container">
+                    <div id="attachmentPreview" class="attachment-preview"></div>
+                    <input type="file" id="fileInput" hidden multiple accept="image/*,.pdf,.doc,.docx">
+                    <button class="attachment-btn" onclick="document.getElementById('fileInput').click()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.44 11.05L12.25 20.24C11.1242 21.3658 9.59723 21.9983 8.005 21.9983C6.41277 21.9983 4.88584 21.3658 3.76 20.24C2.63416 19.1142 2.00166 17.5872 2.00166 15.995C2.00166 14.4028 2.63416 12.8758 3.76 11.75L12.33 3.18C13.0806 2.42925 14.0991 2.00049 15.16 2.00049C16.2209 2.00049 17.2394 2.42925 17.99 3.18C18.7406 3.93075 19.1693 4.94924 19.1693 6.01C19.1693 7.07076 18.7406 8.08925 17.99 8.84L9.41 17.41C9.03472 17.7853 8.52573 17.9936 7.995 17.9936C7.46427 17.9936 6.95528 17.7853 6.58 17.41C6.20472 17.0347 5.99642 16.5257 5.99642 15.995C5.99642 15.4643 6.20472 14.9553 6.58 14.58L15.07 6.1"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input type="text" id="messageInput" placeholder="Type a message...">
+                </div>
+                <button class="send-btn" id="sendMessageBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="messages.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

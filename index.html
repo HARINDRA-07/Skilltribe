@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTribe – Collaborate, Create, Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">SkillTribe</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="collaborate.html">Collaborate</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="user-actions">
+                <div class="chat-icon" id="chatIcon">
+                    <span class="notification-dot" id="notificationDot"></span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="profile-photo" id="profilePhoto">
+                    <img src="https://ui-avatars.com/api/?name=User&background=random" alt="Profile">
+                    <div class="profile-notification-popup" id="profileNotification">
+                        <div class="notification-content">
+                            <span class="notification-message"></span>
+                            <button class="notification-close" aria-label="Close notification">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Your Collaboration Hub: Connect, Form Teams, Build Projects.</h1>
+                <p>SkillTribe is where students, freelancers, and hobbyists find like-minded individuals to bring their
+                    ideas to life.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
+
+        <section id="problem-solution">
+            <div class="container">
+                <div class="problem">
+                    <h2>The Collaboration Challenge</h2>
+                    <p>Finding the right people with complementary skills for your projects can be difficult.
+                        Traditional platforms either focus too much on job hunting or lack the structure needed for
+                        effective collaboration.</p>
+                </div>
+                <div class="solution">
+                    <h2>SkillTribe's Solution</h2>
+                    <p>SkillTribe provides a structured environment where individuals can showcase their skills, form
+                        teams based on project needs, and collaborate effectively using integrated tools designed
+                        specifically for team-based projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Core Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Chat</h3>
+                        <p>Real-time messaging to keep your team connected and conversations organized by project.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>File Sharing</h3>
+                        <p>Seamlessly share documents, designs, and code with your team members.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Real-time Coding</h3>
+                        <p>Collaborate on code together with our integrated development environment.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Team Formation</h3>
+                        <p>Find the perfect teammates based on skills, interests, and availability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Project Organization</h3>
+                        <p>Keep your projects structured with tasks, milestones, and progress tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-different" class="why-different">
+            <div class="container">
+                <h2>What Makes SkillTribe Different?</h2>
+                <div class="differentiators">
+                    <div class="differentiator">
+                        <h3>Focus on Collaboration</h3>
+                        <p>Built specifically for team-based projects rather than just networking or job hunting.</p>
+                    </div>
+                    <div class="differentiator">
+                        <h3>Structured Teams</h3>
+                        <p>Clear roles, responsibilities, and project management tools to keep everyone aligned.</p>
+                    </div>
+                    <div class="differentiator">
+                        <h3>Community-Driven</h3>
+                        <p>A supportive environment where learning and growth are valued alongside project completion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="target-audience" class="target-audience">
+            <div class="container">
+                <h2>Who is SkillTribe For?</h2>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <h3>Students</h3>
+                        <p>Build your portfolio and gain real-world experience by collaborating on projects.</p>
+                    </div>
+                    <div class="audience-card">
+                        <h3>Freelancers</h3>
+                        <p>Find complementary skills to tackle larger projects and expand your service offerings.</p>
+                    </div>
+                    <div class="audience-card">
+                        <h3>Startups</h3>
+                        <p>Connect with talented individuals to help bring your vision to life without the overhead.</p>
+                    </div>
+                    <div class="audience-card">
+                        <h3>Hobbyists</h3>
+                        <p>Turn your passion projects into reality by collaborating with like-minded creators.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Ready to Join the Tribe?</h2>
+                <p>Be among the first to experience SkillTribe when we launch.</p>
+                <button class="cta-button">Get Early Access</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SkillTribe</div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SkillTribe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
