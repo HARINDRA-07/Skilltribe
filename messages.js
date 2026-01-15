@@ -370,7 +370,7 @@ function renderAttachmentPreview() {
 }
 
 // AI Configuration - Replace with your Gemini API key
-const GEMINI_API_KEY = 'AIzaSyCdxO8zUXPhJLnRJeG0SdX5Mjo0v4lkDWs'; // Add your Gemini API key here
+const GEMINI_API_KEY = 'API key'; // Add your Gemini API key here
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 
 // Generate AI response using Gemini API
